@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bhoomi Game Portfolio 🎮</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
+
+h1 {
+  color: purple;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px gray;
+}
+
+button {
+  background-color: hotpink;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: purple;
+}
+
+.points {
+  font-size: 25px;
+  color: green;
+}
+
+.level {
+  font-size: 20px;
+  color: blue;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🎮 Bhoomi's Game Portfolio</h1>
+
+<div class="box">
+  <p class="points">Points: <span id="points">0</span></p>
+  <p class="level">Level: <span id="level">Beginner</span></p>
+</div>
+
+<div class="box">
+  <h2>Complete Tasks 🧩</h2>
+
+  <button onclick="addPoints(10)">Learn HTML ✅</button>
+  <button onclick="addPoints(20)">Build Website 🌐</button>
+  <button onclick="addPoints(30)">Upload to GitHub 🚀</button>
+</div>
+
+<script>
+let points = 0;
+
+function addPoints(value) {
+  points += value;
+  document.getElementById("points").innerText = points;
+
+  if (points >= 50) {
+    document.getElementById("level").innerText = "Pro 🔥";
+  } else if (points >= 20) {
+    document.getElementById("level").innerText = "Intermediate ⭐";
+  } else {
+    document.getElementById("level").innerText = "Beginner 🌱";
+  }
+}
+</script>
+
+</body>
+</html>
